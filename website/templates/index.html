@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number 1 AI | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Number 1 AI</a>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/Pricing">Pricing</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="container">
+        <div class="form-container">
+            <form action="ask-ai">
+                <h1>Your AI Assistant</h1>
+                <span>Ask me anything and I'll help you out</span>
+                <input type="text" class="bot-input" placeholder="Enter your message" required>
+                <button type="submit" class="bot-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

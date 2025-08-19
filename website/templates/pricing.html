@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Number 1 AI</title>
+
+  <!-- Montserrat font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="static/pricing.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Number 1 AI</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Pricing" class="active">Pricing</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="pricing-container">
+    <div class="pricing-header">
+      <h1>Service Pricing</h1>
+    </div>
+    
+    <div class="pricing">
+      <div class="current-plan">
+        <h2>Your Current Plan: <span id="user-plan">Basic</span></h2>
+      </div>
+      <!-- Basic -->
+      <article class="card">
+        <header>
+          <h3>Basic</h3>
+        </header>
+
+        <div class="price-block">
+          <div class="price big">FREE</div>
+        </div>
+
+        <hr />
+
+        <h4>Features</h4>
+        <ul class="features">
+          <li>Access to basic tools</li>
+          <li>Monthly usage reports</li>
+          <li>Limited to 10 projects</li>
+        </ul>
+
+        <form action="/create-checkout-session" method="POST">
+          <button type="submit" class="btn">Get Started</button>
+        </form>
+      </article>
+
+      <!-- Standard -->
+      <article class="card featured">
+        <header>
+          <h3>Standard</h3>
+        </header>
+
+        <div class="price-block">
+          <div class="price"><span class="currency">$</span>90</div>
+          <div class="per">/month</div>
+        </div>
+
+        <hr />
+
+        <h4>Features</h4>
+        <ul class="features">
+          <li>Everything in <strong>Basic</strong> Package</li>
+          <li>Access to premium tools</li>
+          <li>Priority email and chat support</li>
+          <li>Weekly usage reports</li>
+          <li>Unlimited projects</li>
+        </ul>
+
+        <form action="/create-checkout-session" method="POST">
+          <button type="submit" class="btn">Get Started</button>
+        </form>
+      </article>
+
+      <!-- Premium -->
+      <article class="card">
+        <header>
+          <h3>Premium</h3>
+        </header>
+
+        <div class="price-block">
+          <div class="price"><span class="currency">$</span>150</div>
+          <div class="per">/month</div>
+        </div>
+
+        <hr />
+
+        <h4>Features</h4>
+        <ul class="features">
+          <li>Everything in <strong>Standard</strong> Package</li>
+          <li>Dedicated account manager</li>
+          <li>24/7 priority support</li>
+          <li>Custom integrations</li>
+          <li>Advanced analytics and reporting</li>
+        </ul>
+
+        <form action="/create-checkout-session" method="POST">
+          <button type="submit" class="btn">Get Started</button>
+        </form>
+      </article>
+    </div>
+  </div>
+
+<style>
+  .payment-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  .payment-placeholder h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  .payment-placeholder p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  .payment-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .payment-form input, .payment-form select, .payment-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .payment-form button {
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .payment-form button:hover {
+    background-color: #555;
+  }
+</style>
+
+<div class="payment-placeholder">
+  <div>
+    <h1>Payment Page Placeholder</h1>
+    <p>This is a placeholder for the payment page. Integration coming soon!</p>
+  </div>
+</div>
+
+<script>
+  // Example logic to hide 'Get Started' for Basic plan
+  document.querySelectorAll('.card').forEach(card => {
+    if (card.querySelector('.price').textContent.includes('FREE')) {
+      card.querySelector('.btn').style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
